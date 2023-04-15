@@ -1,0 +1,45 @@
+MDScreen:
+    name: "Login"
+    MDFloatLayout:
+        MDFloatLayout:
+            size_hint_y: .75
+            pos_hint: {"center_y": .7}
+            canvas:
+                Color:
+                    rgb: rgba(28, 170, 154)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [0,0,40,40]
+        Image:
+            source: "image/images.png"
+            size_hint: .3, .3
+            pos_hint: {"center_x": .76, "center_y": .82}
+        
+        MDLabel:
+            text: "Log in"
+            font_size: "30sp"
+            font_name: "MRoboto"
+            pos_hint: {"center_x": .65, "center_y": .75}
+            color: 1,1,1,1
+        MDFloatLayout:
+            size_hint: .7, .07
+            pos_hint: {"center_x": .5, "center_y": .65}
+            MDLabel:
+                text: "Email"
+                font_size: "13sp"
+                color: 1, 1, 1, 1
+                pos_hint: {"center_x": .5, "center_y": .9}
+            TextInput:
+                size_hint_y: .75
+                pos_hint: {"center_x": .49, "center_y": .4}
+                background_color: 1, 1, 1, 0
+                foreground_color: 1, 1, 1, 1
+                cursor_color: 1, 1, 1, 1
+                cursor_width: "2sp"
+                font_size: "17sp"
+                multiline: False
+            MDFloatLayout
+                pos_hint: {"center_x": .5, "center_y": 0}
+                size_hint_y: .03
+                md_bg_color: rgba(180, 180, 180, 255)

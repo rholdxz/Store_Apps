@@ -1,0 +1,50 @@
+MDScreen:
+    name: "Welcome"
+    Image:
+        source: "image/image-asset.jpeg"
+        pos_hint: {"center_x": 0.5, "center_y": 0.80}
+        size_hint_x: 2
+
+    Image:
+        source: "image/logo.png"
+        pos_hint: {"center_x": 0.5, "center_y": 0.60}
+
+    Image:
+        source: "image/cindy.png"
+        pos_hint: {"center_x": 0.5, "center_y": 0.45}
+
+    Button:
+        text: "Sign Up"
+        size_hint: .8, .075
+        pos_hint: {"center_x": .5, "center_y": .29}
+        background_color: 1, 1, 1, 0
+        canvas.before:
+            Color:
+                rgb: rgba(228, 0, 35, 255)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius: [23]
+
+    Button:
+        text: "Log In"
+        size_hint: .8, .075
+        pos_hint: {"center_x": .5, "center_y": .195}
+        background_color: 1, 1, 1, 0
+        color: rgba(228, 0, 35, 255)
+        on_release:
+            root.manager.transition.direction = "Left"
+            root.manager.current = "Login"
+        canvas.before:
+            Color:
+                rgb: rgba(228, 0, 35, 255)
+            Line:
+                width: 1
+                rounded_rectangle: self.x, self.y, self.width, self.height, 23, 23, 23, 23, 100
+
+    MDLabel:
+        text: "By continuing you agree to Cindy's terms of Service and Privacy Policy"
+        size_hint_x: 0.75
+        font_size: "12sp"
+        pos_hint: {"center_x": 0.5, "center_y": 0.1}
+        halign: "center"
