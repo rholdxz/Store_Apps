@@ -3,7 +3,7 @@ from kivy.uix.screenmanager import ScreenManager
 from kivymd.app import MDApp
 from kivy.lang import Builder
 from kivy.core.window import Window
-Window.size = (310, 580)
+Window.size = (410, 680)
 
 class Cindy(MDApp):
 
